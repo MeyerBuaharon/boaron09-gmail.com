@@ -1,17 +1,17 @@
 import uuid from "uuid";
 
 //ADD_PLAYLIST
-export const addPlaylist = ({ name = "" ,songs} = {}) => ({
+export const addToPlaylist = ({ name = "", duration = "3:50" } = {}) => ({
   type: "ADD_PLAYLIST",
   playlists: {
     id: uuid(),
     name,
-    songs
+    duration
   }
 });
 
 //REMOVE_LOCATION
-export const removePlaylist = ({ id }) => ({
+export const removeFromPlaylist = ({ id }) => ({
   type: "REMOVE_PLAYLIST",
   id
 });

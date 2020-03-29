@@ -14,7 +14,6 @@ const Root = styled.div`
   background: #1d1d1d;
   transition: opacity 0.2s;
   will-change: opacity;
-  
 `;
 
 const Container = styled.div`
@@ -35,13 +34,13 @@ const CurrentSong = styled.div``;
 
 const Header = ({
   title = "NAME_OF_PLAYLIST",
-  currentSong = "CURRENT_SONG_PLAYING"
+  currSong = "CURRENT_SONG_PLAYING"
 }) => (
   <Root>
     <Logo>LOGO</Logo>
     <Container>
       <Title>{title}</Title>
-      <CurrentSong>{currentSong}</CurrentSong>
+      <CurrentSong>{currSong}</CurrentSong>
     </Container>
   </Root>
 );

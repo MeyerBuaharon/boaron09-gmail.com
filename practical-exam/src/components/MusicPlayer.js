@@ -1,12 +1,7 @@
 import React, { useState } from "react";
 import { Playlist, Player } from "./";
-import { connect, useSelector } from "react-redux";
-import styled from "styled-components";
 
-const selector = state => ({
-  playlists: state.playlists,
-  songs: state.songs
-});
+import styled from "styled-components";
 
 const Root = styled.div`
   position: fixed;
@@ -21,10 +16,7 @@ const Root = styled.div`
   box-sizing: border-box;
 `;
 
-const MusicPlayer = () => {
-  const { playlists } = useSelector(selector);
-  const [currSong, setCurrSong] = useState(playlists.songs[0].id);
-
+const MusicPlayer = ({ currSong, playlists, setCurrSong }) => {
   return (
     <Root>
       <Player
@@ -37,4 +29,4 @@ const MusicPlayer = () => {
   );
 };
 
-export default connect()(MusicPlayer);
+export default MusicPlayer;

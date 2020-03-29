@@ -23,11 +23,11 @@ const UserInteractions = styled.div`
 const Title = styled.div``;
 const CurrentSong = styled.div``;
 
-const Footer = ({ currentSong = "currentSong" }) => (
+const Footer = ({ currSong = "currentSong" }) => (
   <Root>
     <UserInteractions>UserInteractions</UserInteractions>
     <Container>
-      <CurrentSong>{currentSong}</CurrentSong>
+      <CurrentSong>{currSong}</CurrentSong>
     </Container>
     <div></div>
   </Root>
